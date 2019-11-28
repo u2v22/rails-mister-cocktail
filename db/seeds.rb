@@ -1,16 +1,16 @@
 Ingredient.destroy_all
 
-Ingredient.create(name: 'lemon')
-Ingredient.create(name: 'ice')
-Ingredient.create(name: 'mint leaves')
-Ingredient.create(name: 'orange')
-Ingredient.create(name: 'olive')
-Ingredient.create(name: 'rosemary')
-Ingredient.create(name: 'gin')
-Ingredient.create(name: 'tonic')
-Ingredient.create(name: 'bourbon')
-Ingredient.create(name: 'bitters')
-Ingredient.create(name: 'simple syrup')
+Ingredient.create(name: 'Lemon')
+Ingredient.create(name: 'Ice')
+Ingredient.create(name: 'Mint leaves')
+Ingredient.create(name: 'Orange')
+Ingredient.create(name: 'Olive')
+Ingredient.create(name: 'Rosemary')
+Ingredient.create(name: 'Gin')
+Ingredient.create(name: 'Tonic')
+Ingredient.create(name: 'Bourbon')
+Ingredient.create(name: 'Bitters')
+Ingredient.create(name: 'Simple syrup')
 
 # Optional: have fun and seed real ingredients using
 # this JSON list (with open-uri and json ruby libs).

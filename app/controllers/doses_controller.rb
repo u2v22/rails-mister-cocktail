@@ -13,7 +13,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render 'cocktails/new'
+      render 'doses/new'
     end
   end
 
