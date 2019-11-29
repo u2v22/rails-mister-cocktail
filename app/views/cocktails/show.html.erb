@@ -8,4 +8,11 @@
   <% end %>
 </ul>
 
-<%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary'%>
+<h1>Enter ingredients here</h1>
+
+<%= simple_form_for [@cocktail, @dose]  do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, collection: Ingredient.all %>
+  <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+
