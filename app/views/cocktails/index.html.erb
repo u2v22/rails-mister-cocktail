@@ -3,7 +3,7 @@
   <div class="container-fluid block" style="background-image:
       url(https://images.unsplash.com/photo-1509807995916-c332365e2d9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3371&q=80); background-size: cover; padding: 20% 0;">
     <div class="text-center text-light block">
-      <h1 class="banner-header">Veronica's & Raf's Cocktails</h1><br>
+      <h1 class="banner-header">Veronica & Raf's Cocktails</h1><br>
       <%= link_to new_cocktail_path, class: "text-light" do  %>
         <span><i class="fas fa-plus-circle"></i> Add new Cocktail</span>
       <% end %>
@@ -17,7 +17,7 @@
         <div class="show-delete">
           <div class="card rounded shadow mx-auto" style="width: 18rem;">
             <%= link_to cocktail_path(cocktail) do %>
-            <%= cl_image_tag cocktail.photo, :height=>210, :crop=>"fill" %>
+            <%= cl_image_tag cocktail.photo, width:"auto", crop: "fit", class:"cloudinary-image", dpr: "auto", client_hints: true %>
             <div class="card-body">
               <p class="card-text d-flex justify-content-between">
                 <%= link_to cocktail.name %>
