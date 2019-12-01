@@ -1,16 +1,37 @@
 // Import Google fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url("https://fonts.googleapis.com/css?family=Rock+Salt&display=swap");
 
 // Define fonts for body and headers
 $body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
+$headers-font: 'Rock Salt', "Helvetica", "sans-serif";
 
-// To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: "Font Name";
-//   src: font-url('FontFile.eot');
-//   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
-//        font-url('FontFile.woff') format('woff'),
-//        font-url('FontFile.ttf') format('truetype')
-// }
-// $my-font: "Font Name";
+body {
+  text-decoration: none;
+  color: black;
+  a {
+    color: black;
+  }
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    h1 {
+      font-size: 24px;
+    }
+  }
+}
+
+// default: Extra small devices (Portrait phone 👉 less than 576px)
+// sm: Small devices (Landscape phone 👉 576px and up)
+// md: Medium devices (Tablet 👉 768px and up)
+// lg: Large devices (Desktops 👉 992px and up)
+// xl: Extra large devices (Large desktops 👉 1200px and up)
+

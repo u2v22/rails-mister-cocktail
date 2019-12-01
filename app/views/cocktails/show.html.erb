@@ -1,20 +1,28 @@
-<%= link_to 'Back to all cocktails', cocktails_path, class: 'btn btn-primary' %>
+<div class="container">
+  <div class="col-lg-12">
+    <div class="d-flex">
+      <%= link_to cocktails_path do %>
+        <i class="fa fa-chevron-circle-left"> </i>
+      <% end %>
 
-<h1><%= @cocktail.name %></h1>
+      <div>
+        <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+        <ul>
+          <% @cocktail.doses.each do |dose|%>
+          <li><%= dose.description %> <%= dose.ingredient.name %><%= link_to '(x)', dose_path(dose), method: 'delete'%></li>
+          <% end %>
+        </ul>
+      </div>
 
-<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
-
-<ul>
-  <% @cocktail.doses.each do |dose|%>
-  <li><%= dose.description %> <%= dose.ingredient.name %><%= link_to 'Delete ingredient', dose_path(dose), method: 'delete', class: 'btn btn-primary'  %></li>
-  <% end %>
-</ul>
-
-<h1>Enter ingredients here</h1>
-
-<%= simple_form_for [@cocktail, @dose]  do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.all %>
-  <%= f.button :submit, class: "btn btn-primary" %>
-<% end %>
-
+      <div class="ml-4 flex-grow-1">
+        <h2><%= @cocktail.name %></h2>
+        <h3>Enter ingredients here</h3>
+        <%= simple_form_for [@cocktail, @dose]  do |f| %>
+          <%= f.input :description %>
+          <%= f.association :ingredient, collection: Ingredient.all %>
+          <%= f.button :submit, class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
