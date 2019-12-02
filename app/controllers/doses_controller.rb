@@ -1,11 +1,6 @@
 class DosesController < ApplicationController
   before_action :set_doses, only: [:destroy]
 
-  # def new
-  #   @cocktail = Cocktail.find(params[:cocktail_id])
-  #   @dose = Dose.new
-  # end
-
   def create
     @cocktail = Cocktail.find(params[:cocktail_id])
     @dose = Dose.new(dose_params)

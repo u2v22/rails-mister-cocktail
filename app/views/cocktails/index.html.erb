@@ -1,4 +1,4 @@
-<body class="bg-light">
+<body>
 
   <div class="container-fluid block" style="background-image:
       url(https://images.unsplash.com/photo-1509807995916-c332365e2d9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3371&q=80); background-size: cover; padding: 20% 0;">
@@ -15,7 +15,7 @@
       <% @cocktails.each do |cocktail| %>
       <div class="col-12 col-md-6 col-lg-4 my-5 justify-content-between">
         <div class="show-delete">
-          <div class="card rounded shadow mx-auto" style="width: 18rem;">
+          <div class="card rounded-lg shadow mx-auto border-0" style="width: 18rem;">
             <%= link_to cocktail_path(cocktail) do %>
             <%= cl_image_tag cocktail.photo, width:"auto", crop: "fit", class:"cloudinary-image", dpr: "auto", client_hints: true %>
             <div class="card-body">
